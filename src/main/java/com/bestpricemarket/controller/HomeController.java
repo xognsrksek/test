@@ -1,4 +1,4 @@
-package com.bestpricemarket.web;
+package com.bestpricemarket.controller;
 
 import java.text.DateFormat;
 import java.util.Date;

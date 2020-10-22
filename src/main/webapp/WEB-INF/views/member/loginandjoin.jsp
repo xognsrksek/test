@@ -89,7 +89,11 @@ System.out.println("여긴 jsp야");
             <div class="modal-body">
                 <div class="box">
                     <div class="content">
-                        <div class="social"> <a class="circle github" href="#"> <i class="fa fa-github fa-fw"></i> </a> <a id="google_login" class="circle google" href="#"> <i class="fa fa-google-plus fa-fw"></i> </a> <a id="facebook_login" class="circle facebook" href="#"> <i class="fa fa-facebook fa-fw"></i> </a> </div>
+                        <div class="social"> 
+                         <a class="circle github" href="#"> <i class="fa fa-github fa-fw"></i> </a> 
+                         	<a id="google_login" class="circle google" href="#"> <i class="fa fa-google-plus fa-fw"></i> </a> 
+                        		<a id="facebook_login" class="circle facebook" href="#"> <i class="fa fa-facebook fa-fw"></i> </a> 
+                        </div>
                         <div class="division">
                             <div class="line l"></div> <span>다른 아이디가 있으시다면</span>
                             <div class="line r"></div>
@@ -114,13 +118,13 @@ System.out.println("여긴 jsp야");
                             	<input id="pw" class="form-control" type="password" placeholder="비밀번호" name="password"> 
                             	<input id="pw_confirmation" class="form-control" type="password" placeholder="비밀번호 재확인" name="password_confirmation"> 
                             	<input id="phone" class="form-control" type="text" placeholder="전화번호" name="phone"> 
-                            	 <input type="button" onclick="sample4_execDaumPostcode()"  value="우편번호 찾기"><br>
+                            	
                             	<input type="text" id="sample4_postcode" class="form-control" placeholder="우편번호">
 								<input type="text" id="sample4_roadAddress" class="form-control" placeholder="도로명주소">
 								<input type="text" id="sample4_jibunAddress" class="form-control" placeholder="지번주소">
 								<span id="guide" style="color:#999;display:none"></span>
 								<input type="text" id="sample4_detailAddress" class="form-control" placeholder="상세주소">
-								
+								<input type="button" class="btn btn-default btn-register" onclick="sample4_execDaumPostcode()"  value="우편번호 찾기"><br>
                             	
 								
                             	

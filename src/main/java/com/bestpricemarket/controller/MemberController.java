@@ -28,7 +28,7 @@ public class MemberController {
 	@RequestMapping(value = "/insert", method = RequestMethod.GET)
 	public String insertGET() throws Exception {
 		l.info("C: 회원가입 입력페이지 GET");
-		return "/member/insertMember";
+		return "/member/loginandjoin";
 	}
 	
 	@RequestMapping(value = "/insert", method = RequestMethod.POST)
@@ -37,11 +37,15 @@ public class MemberController {
 		l.info("C: "+ vo);		
 		service.insertMember(vo);		
 		l.info("C: 회원가입 처리페이지 POST");		
-		return "redirect:/member/login";
+		return "redirect:/member/loginandjoin";
 	}
 	
 	/* 로그인 기능 */
 	// http://localhost:8088/member/login
-	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String loginGET() throws Exception{
+		l.info("C: 로그인 입력페이지 GET");
+		return "/member/loginandjoin";
+	}
 	
 }

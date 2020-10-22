@@ -36,18 +36,12 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping(value = "/index", method = RequestMethod.GET)
+	// http://localhost:8088/web/login
+	// http://localhost:8088/web/loginandjoin
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String index(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "index";
+		logger.info("여긴login매퍼야");
+		return "/member/loginandjoin";
 	}
 	
 }

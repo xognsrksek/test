@@ -43,7 +43,7 @@ public class MemberController {
 	}
 	
 	/* 로그인 기능 */
-	// http://localhost:8088/web/member/login
+	// http://localhost:8088/web/login
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String loginGET() throws Exception{
 		l.info("C: 로그인 입력페이지 GET");

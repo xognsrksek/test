@@ -42,7 +42,7 @@
 	<context:component-scan base-package="com.bestpricemarket.persistence" />
 	
 	<!-- 서비스패키지와 연결  -->
-	<context:component-scan base-package="com.itwillbsbestpricemarket.service" />
+	<context:component-scan base-package="com.bestpricemarket.service" />
 	
 		
 </beans>

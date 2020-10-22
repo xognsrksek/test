@@ -36,12 +36,17 @@ public class HomeController {
 		return "home";
 	}
 	
+	// http://localhost:8088/web/index
+	@RequestMapping(value = "/index", method = RequestMethod.GET)
+	public String index() {
+		logger.info("여긴index매퍼야");
+		return "index";
+	}
+	
 	// http://localhost:8088/web/login
-	// http://localhost:8088/web/loginandjoin
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String index(Locale locale, Model model) {
+	public String login() {
 		logger.info("여긴login매퍼야");
 		return "/member/loginandjoin";
 	}
-	
 }

@@ -54,7 +54,7 @@ System.out.println("여긴 jsp야");
 <!-- Bootstrap js -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js'></script>
-<script src="resources/loginandjoin/loginandjoin.js"></script>
+<script src='resources/loginandjoin/loginandjoin.js'></script>
 
 </body>
 </html>

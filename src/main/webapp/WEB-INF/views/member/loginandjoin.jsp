@@ -8,8 +8,12 @@
 <!-- bootstrap css  -->
 <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' rel="stylesheet">
 <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/loginandjoin/loginandjoin.css" rel="stylesheet">
 
-<link href="resources/loginandjoin/loginandjoin.css" rel="stylesheet">
+<!-- Bootstrap js -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js'></script>
+<script src='${pageContext.request.contextPath}/resources/loginandjoin/loginandjoin.js'></script>
 
 </head>
 <body>
@@ -51,10 +55,7 @@ System.out.println("여긴 jsp야");
         </div>
     </div>
 </div>
-<!-- Bootstrap js -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js'></script>
-<script src='resources/loginandjoin/loginandjoin.js'></script>
+
 
 </body>
 </html>

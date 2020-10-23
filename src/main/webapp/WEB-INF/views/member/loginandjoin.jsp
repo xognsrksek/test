@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>로그인 | 회원가입</title>
 <!-- bootstrap css  -->
 <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' rel="stylesheet">
 <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel="stylesheet">
@@ -75,9 +75,6 @@
 </script>
 </head>
 <body>
-<%
-System.out.println("여긴 jsp야");
-%>
 <div class="modal fade login" id="loginModal">
     <div class="modal-dialog login animated">
         <div class="modal-content">
@@ -122,13 +119,10 @@ System.out.println("여긴 jsp야");
 								<input type="text" id="sample4_jibunAddress" class="form-control" placeholder="지번주소">
 								<span id="guide" style="color:#999;display:none"></span>
 								<input type="text" id="sample4_detailAddress" class="form-control" placeholder="상세주소">
-								<input type="button" class="btn btn-default btn-register" onclick="sample4_execDaumPostcode()"  value="우편번호 찾기"><br>
-                            	
+								<input type="button" class="btn btn-default btn-register" onclick="sample4_execDaumPostcode()"  value="우편번호 찾기"
+										style="width:200px"><br>
 								
-                            	
                             	<input class="btn btn-default btn-register" type="button" value="회원가입" name="commit"> 
-                                
-                            
                             </form>
                         </div>
                     </div>

@@ -7,13 +7,13 @@
   
 <mapper namespace="com.bestpricemarket.mappers.memberMapper">
 	<insert id="joinMember">
-		insert into bestpricemarket(id,pw,username,email,phone,addr,reg_date) 
-      values (#{id},#{pw},#{username},#{email},#{phone},#{addr},now())
+		insert into member(id,pw,username,email,phone,addr1,addr2,reg_date) 
+      	values (#{id},#{pw},#{username},#{email},#{phone},#{addr1},#{addr2},now())
 	</insert>
 	
 	<select id="readMemberWithIDPW" resultType="com.bestpricemarket.domain.MemberVO">
 		select *
-		from bestpricemarket
+		from member
 		where id=#{id} and pw=#{pw}
 	</select>	
 	

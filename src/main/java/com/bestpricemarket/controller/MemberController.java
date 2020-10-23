@@ -25,7 +25,7 @@ public class MemberController {
 	private static final Logger l = LoggerFactory.getLogger(MemberController.class);
 	
 	/* 회원가입 */
-	// http://localhost:8088/controller/member/join
+	// http://localhost:8088/member/join
 	
 	@RequestMapping(value = "/join", method = RequestMethod.GET)
 	public String insertGET() throws Exception {
@@ -38,11 +38,11 @@ public class MemberController {
 		l.info("C: 회원가입포스트메서드"+ vo);		
 		service.joinMember(vo);		
 		l.info("C: 회원가입 처리페이지 POST");		
-		return "redirect:/member/loginandjoin";
+		return "redirect:/member/login";
 	}
 	
 	/* 로그인 기능 */
-	// http://localhost:8088/controller/member/login
+	// http://localhost:8088/member/login
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String loginGET() throws Exception{
@@ -68,7 +68,7 @@ public class MemberController {
 	}
 	
 	/* 메인페이지 */
-	// http://localhost:8088/controller/member/main
+	// http://localhost:8088/member/main
 	
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public String mainGET() throws Exception{

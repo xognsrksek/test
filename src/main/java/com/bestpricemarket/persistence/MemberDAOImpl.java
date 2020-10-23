@@ -23,7 +23,7 @@ public class MemberDAOImpl implements MemberDAO {
 	//회원가입
 	@Override
 	public void joinMember(MemberVO vo) {
-		System.out.println("#####");
+		System.out.println("DAO: 회원가입");
 		sqlSession.insert(namespace+".joinMember", vo);
 	}
 

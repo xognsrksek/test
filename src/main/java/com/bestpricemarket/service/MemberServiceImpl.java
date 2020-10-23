@@ -20,6 +20,7 @@ public class MemberServiceImpl implements MemberService{
 	@Override
 	public void joinMember(MemberVO vo) {
 		mdao.joinMember(vo);		
+		System.out.println("S: 회원가입");
 	}
 
 	// 로그인

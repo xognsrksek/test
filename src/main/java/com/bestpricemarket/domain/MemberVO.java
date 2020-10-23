@@ -8,7 +8,8 @@ public class MemberVO {
 	private String username;
 	private String email;
 	private String phone;
-	private String addr;
+	private String addr1;
+	private String addr2;
 	private Timestamp reg_date;
 	private int block;
 	private String block_r;
@@ -16,15 +17,16 @@ public class MemberVO {
 	
 	//생성자 2개 : 기본생성자, 멤버변수를 인자로 전부받는 생성자
 	public MemberVO() {}
-	public MemberVO(String id, String pw, String username, String email, String phone, String addr, Timestamp reg_date,
-			int block, String block_r, int score) {
+	public MemberVO(String id, String pw, String username, String email, String phone, String addr1, String addr2,
+			Timestamp reg_date, int block, String block_r, int score) {
 		super();
 		this.id = id;
 		this.pw = pw;
 		this.username = username;
 		this.email = email;
 		this.phone = phone;
-		this.addr = addr;
+		this.addr1 = addr1;
+		this.addr2 = addr2;
 		this.reg_date = reg_date;
 		this.block = block;
 		this.block_r = block_r;
@@ -62,11 +64,17 @@ public class MemberVO {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public String getAddr() {
-		return addr;
+	public String getAddr1() {
+		return addr1;
 	}
-	public void setAddr(String addr) {
-		this.addr = addr;
+	public void setAddr1(String addr1) {
+		this.addr1 = addr1;
+	}
+	public String getAddr2() {
+		return addr2;
+	}
+	public void setAddr2(String addr2) {
+		this.addr2 = addr2;
 	}
 	public Timestamp getReg_date() {
 		return reg_date;
@@ -96,8 +104,7 @@ public class MemberVO {
 	@Override
 	public String toString() {
 		return "MemberVO [id=" + id + ", pw=" + pw + ", username=" + username + ", email=" + email + ", phone=" + phone
-				+ ", addr=" + addr + ", reg_date=" + reg_date + ", block=" + block + ", block_r=" + block_r + ", score="
-				+ score + "]";
+				+ ", addr1=" + addr1 + ", addr2=" + addr2 + ", reg_date=" + reg_date + ", block=" + block + ", block_r="
+				+ block_r + ", score=" + score + "]";
 	}
-		
 }

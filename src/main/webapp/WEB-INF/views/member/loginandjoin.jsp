@@ -40,7 +40,7 @@
                             <form action="/member/login" method="post" accept-charset="UTF-8"> 
                             	<input id="id" class="form-control" type="text" placeholder="아이디" name="id"> 
                             	<input id="pw" class="form-control" type="password" placeholder="비밀번호" name="pw"> 
-                            	<input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()"> 
+                            	<input class="btn btn-default btn-login" type="submit" value="로그인" onclick="loginAjax()"> 
                             </form>
                         </div>
                     </div>
@@ -59,10 +59,10 @@
 								<input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기" class="btn btn-default btn-register" style="width:170px;height:50px;margin:0;padding:0;display:inline;"><br>
 								<input type="text" id="sample4_roadAddress" class="form-control" placeholder="도로명주소" name="addr1" readonly>
 								<input type="hidden" id="sample4_jibunAddress" class="form-control" placeholder="지번주소">
-								<span id="guide" style="color:#999;display:none"></span>
 								<input type="text" id="sample4_detailAddress" class="form-control" placeholder="상세주소" name="addr2">
 								<input type="hidden" id="sample4_extraAddress" class="form-control" placeholder="참고항목">
-                            	<input class="btn btn-default btn-register" type="button" value="회원가입" name="commit"> 
+								<span id="guide" style="color:#999;display:none;visibility:hidden;"></span>
+                            	<input class="btn btn-default btn-register" type="submit" value="회원가입" name="commit"> 
                             </form>
                         </div>
                     </div>

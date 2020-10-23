@@ -47,7 +47,6 @@ public class MemberController {
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String loginGET() throws Exception{
 		l.info("C: 로그인 입력페이지 GET");
-		l.debug("/login");
 		return "/member/loginandjoin";
 	}
 	

@@ -49,18 +49,18 @@
                     <div class="content registerBox" style="display:none;">
                         <div class="form">
                             <form action="/member/join" method="post" html="{:multipart=>true}" data-remote="true" accept-charset="UTF-8"> 
-                            	<input id="id" class="form-control" type="text" placeholder="아이디" name="id"> 
-                            	<input id="username" class="form-control" type="text" placeholder="이름" name="username"> 
+                            	<input id="id" class="form-control" type="text" placeholder="아이디" name="id" required> 
+                            	<input id="username" class="form-control" type="text" placeholder="이름" name="username" required> 
                             	<input id="pw" class="form-control" type="password" placeholder="비밀번호(영문숫자특수문자혼합 8자리이상)" name="pw"> 
                             	<input id="pw_confirmation" class="form-control" type="password" placeholder="비밀번호 재확인" name="password_confirmation"> 
-                            	<input id="email" class="form-control" type="text" placeholder="이메일" name="email">
-                            	<input id="phone" class="form-control" type="text" placeholder="전화번호 예시)01012345678" name="phone">                      
+                            	<input id="email" class="form-control" type="text" placeholder="이메일" name="email" required>
+                            	<input id="phone" class="form-control" type="text" placeholder="전화번호 예시)01012345678" name="phone" required>                      
 								<input type="text" id="sample4_postcode" class="form-control" placeholder="우편번호" style="width:144px;margin:0 0 5px 0;padding:12 0;display:inline;" readonly>
 								<input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기" class="btn btn-default btn-register" style="width:170px;height:50px;margin:0;padding:0;display:inline;"><br>
-								<input type="text" id="sample4_roadAddress" class="form-control" placeholder="도로명주소" name="addr" readonly>
+								<input type="text" id="sample4_roadAddress" class="form-control" placeholder="도로명주소" name="addr1" readonly>
 								<input type="hidden" id="sample4_jibunAddress" class="form-control" placeholder="지번주소">
 								<span id="guide" style="color:#999;display:none"></span>
-								<input type="text" id="sample4_detailAddress" class="form-control" placeholder="상세주소">
+								<input type="text" id="sample4_detailAddress" class="form-control" placeholder="상세주소" name="addr2">
 								<input type="hidden" id="sample4_extraAddress" class="form-control" placeholder="참고항목">
                             	<input class="btn btn-default btn-register" type="button" value="회원가입" name="commit"> 
                             </form>

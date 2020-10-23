@@ -17,38 +17,64 @@ import com.bestpricemarket.service.MemberService;
 @Controller
 @RequestMapping(value = "/member/*")
 public class MemberController {
-	//3-1. 서비스 처리 객체를 주입(DI)
+
 	@Inject
 	//@Autowired
 	private MemberService service;
 	
 	private static final Logger l = LoggerFactory.getLogger(MemberController.class);
 	
-	/* 회원가입 처리하는 동작 */
-	// http://localhost:8088/member/insert
+	/* 회원가입 */
+	// http://localhost:8088/controller/member/join
 	
-	@RequestMapping(value = "/insert", method = RequestMethod.GET)
+	@RequestMapping(value = "/join", method = RequestMethod.GET)
 	public String insertGET() throws Exception {
 		l.info("C: 회원가입 입력페이지 GET");
 		return "/member/loginandjoin";
 	}
 	
-	@RequestMapping(value = "/insert", method = RequestMethod.POST)
+	@RequestMapping(value = "/join", method = RequestMethod.POST)
 	public String insertPOST(MemberVO vo) throws Exception{
-				
-		l.info("C: "+ vo);		
-		service.insertMember(vo);		
+		l.info("C: 회원가입포스트메서드"+ vo);		
+		service.joinMember(vo);		
 		l.info("C: 회원가입 처리페이지 POST");		
 		return "redirect:/member/loginandjoin";
 	}
 	
 	/* 로그인 기능 */
 	// http://localhost:8088/controller/member/login
+	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String loginGET() throws Exception{
 		l.info("C: 로그인 입력페이지 GET");
 		l.debug("/login");
 		return "/member/loginandjoin";
+	}
+	
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	public String loginPOST(MemberVO vo, HttpSession session, RedirectAttributes rttr) throws Exception{
+		l.info("C: 로그인포스트"+ vo.getId() + vo.getPw());
+		
+		MemberVO returnVO = service.loginMember(vo);
+		l.info("C: 리턴VO결과(서비스에서 예외처리를 진행했으므로 null이 출력되면 코드에 문제있다는 의미) "+returnVO);
+		
+		if(returnVO != null) {
+			session.setAttribute("id", returnVO.getId());			
+			rttr.addFlashAttribute("mvo", returnVO);
+			return "redirect:/member/main"; 
+		} else {
+			// 해당 정보 없는 경우 : => login페이지로 이동
+			return "redirect:/member/login";
+		}
+	}
+	
+	/* 메인페이지 */
+	// http://localhost:8088/controller/member/main
+	
+	@RequestMapping(value = "/main", method = RequestMethod.GET)
+	public String mainGET() throws Exception{
+		l.info("C: 메인 출력페이지 GET");
+		return "index";
 	}
 	
 }

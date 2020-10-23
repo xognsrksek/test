@@ -1,27 +1,41 @@
 package com.bestpricemarket.persistence;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.bestpricemarket.domain.MemberVO;
+
 @Repository
 public class MemberDAOImpl implements MemberDAO {
 
-	//DB연결 (xml에서 만들어진 객체를 가져다 사용하고자함 = 의존 주입)
+	//DB연결
 	@Inject
-	//@Autowired
 	private SqlSession sqlSession; //mapper위치까지 접근 가능 but mapper가 여러개일수있음 => mapper구분필요
 	
-	//mapper구분하는 값 namespace
 	private static final String namespace = "com.bestpricemarket.mappers.memberMapper";
-	
-	//테스트
+
+	//회원가입
 	@Override
-	public String getTime() {
-		String result = sqlSession.selectOne(namespace+".getTime"); //괄호안에 쿼리구문입력하기
-		return result;
+	public void joinMember(MemberVO vo) {
+		System.out.println("#####");
+		sqlSession.insert(namespace+".joinMember", vo);
 	}
+
+	//회원정보읽기
+	@Override
+	public MemberVO readMemberWithIDPW(String id, String pw) throws Exception {
+		Map<String, Object> paramMap = new HashMap<String, Object>();
+		paramMap.put("id", id);
+		paramMap.put("pw", pw);
+		
+		return sqlSession.selectOne(namespace+".readMemberWithIDPW", paramMap);	
+	}
+	
 	
 }

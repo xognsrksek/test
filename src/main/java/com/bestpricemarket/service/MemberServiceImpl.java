@@ -15,10 +15,26 @@ public class MemberServiceImpl implements MemberService{
 	@Inject
 	//@Autowired
 	private MemberDAO mdao;
-	
+
+	// 회원가입
 	@Override
-	public void insertMember(MemberVO vo) {
-		System.out.println("회원가입메서드 테스트");
+	public void joinMember(MemberVO vo) {
+		mdao.joinMember(vo);		
 	}
+
+	// 로그인
+	@Override
+	public MemberVO loginMember(MemberVO vo) {
+		MemberVO returnVO = null;
+		try {
+			returnVO = mdao.readMemberWithIDPW(vo.getId(), vo.getPw());
+		} catch (Exception e) {
+			e.printStackTrace();
+			returnVO = null; //실행하다 문제가 생겼을때 해당 데이터를 보내지않겠다는 의미 = 예외처리
+		}
+		return returnVO; 
+	}
+	
+
 
 }

@@ -6,8 +6,15 @@
   
   
 <mapper namespace="com.bestpricemarket.mappers.memberMapper">
-	<select id="getTime" resultType="string">
-		select now()
-	</select>
+	<insert id="joinMember">
+		insert into bestpricemarket(id,pw,username,email,phone,addr,reg_date) 
+      values (#{id},#{pw},#{username},#{email},#{phone},#{addr},now())
+	</insert>
+	
+	<select id="readMemberWithIDPW" resultType="com.bestpricemarket.domain.MemberVO">
+		select *
+		from bestpricemarket
+		where id=#{id} and pw=#{pw}
+	</select>	
 	
 </mapper>

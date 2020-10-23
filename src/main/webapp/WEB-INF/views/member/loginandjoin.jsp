@@ -8,16 +8,14 @@
 <!-- bootstrap css  -->
 <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' rel="stylesheet">
 <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel="stylesheet">
-
-<link href="${pageContext.request.contextPath }/resources/loginandjoin/loginandjoin.css" rel="stylesheet">
-
+<link href="${pageContext.request.contextPath}/resources/loginandjoin/loginandjoin.css" rel="stylesheet">
 
 <!-- Bootstrap js -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js'></script>
-<script src='${pageContext.request.contextPath }/resources/loginandjoin/loginandjoin.js'></script>
-
+<script src='${pageContext.request.contextPath}/resources/loginandjoin/loginandjoin.js'></script>
 <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  
 <script>
     //본 예제에서는 도로명 주소 표기 방식에 대한 법령에 따라, 내려오는 데이터를 조합하여 올바른 주소를 구성하는 방법을 설명합니다.
     function sample4_execDaumPostcode() {

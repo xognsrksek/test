@@ -44,7 +44,7 @@ public class HomeController {
 	}
 	
 	// http://localhost:8088/web/login
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	//@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login() {
 		logger.info("여긴login매퍼야");
 		return "/member/loginandjoin";

@@ -40,7 +40,8 @@
                             <form action="/member/login" method="post" accept-charset="UTF-8"> 
                             	<input id="id" class="form-control" type="text" placeholder="아이디" name="id"> 
                             	<input id="pw" class="form-control" type="password" placeholder="비밀번호" name="pw"> 
-                            	<input class="btn btn-default btn-login" type="submit" value="로그인" onclick="loginAjax()"> 
+                            	<!-- <input class="btn btn-default btn-login" type="submit" value="로그인" onclick="loginAjax()">  -->
+                            	<input class="btn btn-default btn-login" type="submit" value="로그인"> 
                             </form>
                         </div>
                     </div>

@@ -40,13 +40,13 @@ function openRegisterModal(){
 }
 
 function loginAjax(){
-/* Remove this comments when moving to server
-$.post( "/login", function( data ) {
-if(data == 1){
-window.location.replace("/home");
-} else {
-shakeModal();
-}
+	/* Remove this comments when moving to server
+		$.post( "/login", function( data ) {
+		if(data == 1){
+			window.location.replace("/main");
+		} else {
+			shakeModal();
+	}
 });
 */
 
@@ -55,10 +55,10 @@ shakeModal();
 }
 
 function shakeModal(){
-$('#loginModal .modal-dialog').addClass('shake');
-$('.error').addClass('alert alert-danger').html("Invalid email/password combination");
-$('input[type="password"]').val('');
-setTimeout( function(){
-$('#loginModal .modal-dialog').removeClass('shake');
-}, 1000 );
+	$('#loginModal .modal-dialog').addClass('shake');
+	$('.error').addClass('alert alert-danger').html("잘못된 아이디/비밀번호입니다.");
+	/*$('input[type="password"]').val('');*/
+	setTimeout( function(){
+		$('#loginModal .modal-dialog').removeClass('shake');
+	}, 1000 );
 }

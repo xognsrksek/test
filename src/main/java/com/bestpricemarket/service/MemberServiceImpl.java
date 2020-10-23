@@ -29,7 +29,7 @@ public class MemberServiceImpl implements MemberService{
 		MemberVO returnVO = null;
 		try {
 			returnVO = mdao.readMemberWithIDPW(vo.getId(), vo.getPw());
-			System.out.println("S: 로그인 아디"+vo.getId()+" 비번: "+vo.getPw());
+			System.out.println("S: 로그인 아디: "+vo.getId()+" 비번: "+vo.getPw());
 		} catch (Exception e) {
 			e.printStackTrace();
 			returnVO = null; //실행하다 문제가 생겼을때 해당 데이터를 보내지않겠다는 의미 = 예외처리

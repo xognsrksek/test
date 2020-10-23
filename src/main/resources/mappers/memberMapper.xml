@@ -15,6 +15,6 @@
 		select *
 		from member
 		where id=#{id} and pw=#{pw}
-	</select>	
+	</select>
 	
 </mapper>

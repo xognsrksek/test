@@ -52,7 +52,7 @@ public class MemberController {
 	
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String loginPOST(MemberVO vo, HttpSession session, RedirectAttributes rttr) throws Exception{
-		l.info("C: 로그인포스트"+ vo.getId() + vo.getPw());
+		l.info("C: 로그인POST"+ vo.getId() + vo.getPw());
 		
 		MemberVO returnVO = service.loginMember(vo);
 		l.info("C: 리턴VO결과(서비스에서 예외처리를 진행했으므로 null이 출력되면 코드에 문제있다는 의미) "+returnVO);

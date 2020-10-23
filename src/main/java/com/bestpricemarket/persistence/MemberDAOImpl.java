@@ -30,10 +30,11 @@ public class MemberDAOImpl implements MemberDAO {
 	//회원정보읽기
 	@Override
 	public MemberVO readMemberWithIDPW(String id, String pw) throws Exception {
-		Map<String, Object> paramMap = new HashMap<String, Object>();
+		Map<String, String> paramMap = new HashMap<String, String>();
 		paramMap.put("id", id);
 		paramMap.put("pw", pw);
 		
+		System.out.println("DAO: 로그인- "+paramMap);
 		return sqlSession.selectOne(namespace+".readMemberWithIDPW", paramMap);	
 	}
 	
